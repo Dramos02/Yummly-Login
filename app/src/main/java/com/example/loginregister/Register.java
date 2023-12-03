@@ -27,6 +27,7 @@ public class Register extends AppCompatActivity {
     ProgressBar progressBar;
     TextView textView;
 
+    //makikita to sa Docs Firebase mga code para makapag start yung user/login/register
     @Override
     public void onStart() {
         super.onStart();
@@ -75,6 +76,7 @@ public class Register extends AppCompatActivity {
                     Toast.makeText(Register.this, "Enter Password", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                //meron tong Kotlin ktx na version nasa Docs = https://firebase.google.com/docs/auth/android/password
                 mAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
